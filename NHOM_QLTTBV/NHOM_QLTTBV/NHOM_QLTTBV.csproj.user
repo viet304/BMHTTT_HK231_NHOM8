@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="BacSi\FormMain_BS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BacSi\Form_HSBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BacSi\Form_HSBA_DV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BacSi\Form_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BacSi\Form_TTBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BenhNhan\FormMain_BN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BenhNhan\Form_Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\FormMain_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\Form_xemTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="NhanVien\HSBA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form1_capnhat_NhanViencs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_AddRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_CheckPrivilege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_DeleteRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_DeleteUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_GrantPrivileges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_GrantRoleToUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_RevokeRolecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_ShowUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_them_CSYT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_them_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\Form_xem_audit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\From_capnhat_CSYT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Source\ThemDuLieu_CSYT_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

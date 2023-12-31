@@ -1,0 +1,41 @@
+alter session set "_ORACLE_SCRIPT"=true; 
+DROP PROFILE PROFILE_QLTTBV CASCADE;
+--TAO PROFILE QUAN LY PASSWORD
+ALTER SYSTEM SET RESOURCE_LIMIT = TRUE;
+--KIEM TRA PASSWORD_VERIFY_FUNCTION(KHONG CHAY)
+select *
+from dba_source
+where owner = 'SYS'
+    and name in
+    (
+        --The name of all password functions in use.
+        --See DBA_USERS.PROFILE to determine which user is using which profile.
+        select limit
+        from dba_profiles
+        where resource_name = 'PASSWORD_VERIFY_FUNCTION'
+            --Yes, this is intentionally the string 'NULL', that's what Oracle uses here.
+            and limit <> 'NULL'
+    )
+order by name, line;
+---------------------
+CREATE PROFILE PROQLTTBV LIMIT
+   FAILED_LOGIN_ATTEMPTS 5
+   PASSWORD_LIFE_TIME 60
+   PASSWORD_REUSE_TIME 60
+   PASSWORD_REUSE_MAX 5
+   PASSWORD_VERIFY_FUNCTION ora12c_verify_function
+   PASSWORD_LOCK_TIME 1/24
+   PASSWORD_GRACE_TIME 10
+   INACTIVE_ACCOUNT_TIME 30;
+   
+ --KIEM TRA PROFILE VUA TAO
+ SELECT DISTINCT resource_name, limit
+FROM dba_profiles
+WHERE profile='PROQLTTBV';
+--THAY DOI PROFILE (KHÔNG CHAY)
+ALTER PROFILE PROQLTTBV LIMIT
+SESSIONS_PER_USER 4
+FAILED_LOGIN_ATTEMPTS 4;
+--GAN PROFILE CHO 1 USER
+ALTER USER venice
+PROFILE app_user;
